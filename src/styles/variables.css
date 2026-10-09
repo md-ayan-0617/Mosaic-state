@@ -1,0 +1,170 @@
+/* MOSAIC/STATE Design System Variables */
+:root {
+  /* Editorial Light Base Palette */
+  --canvas: #EDEDE7;
+  --paper: #F7F6F1;
+  --ink: #171816;
+  --graphite: #30312F;
+  --line: #C7C7BF;
+  --mist: #DADBD3;
+  --white: #FCFBF7;
+
+  /* System Accent Colors */
+  --system-blue: #2454FF;
+  --signal-orange: #FF6037;
+  --network-green: #4FCE83;
+  --map-yellow: #F4D65B;
+  --violet: #826CFF;
+  --deep-red: #A53030;
+
+  /* Dark Mode States (Used conditionally) */
+  --night: #111310;
+  --night-panel: #1B1D1A;
+  --night-text: #EFEEE8;
+  --night-line: #2D302B;
+
+  /* Active Theme Tokens (Default: Light Canvas) */
+  --bg-primary: var(--canvas);
+  --bg-secondary: var(--paper);
+  --bg-card: var(--white);
+  --text-primary: var(--ink);
+  --text-secondary: var(--graphite);
+  --text-muted: #6B6D68;
+  --border-color: var(--line);
+  --accent-color: var(--system-blue);
+
+  /* Typography */
+  --font-display: 'Afacad Flux', -apple-system, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans: 'Schibsted Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Fragment Mono', monospace;
+
+  /* Typography Scale */
+  --text-mega: clamp(105px, 14vw, 240px);
+  --text-hero: clamp(72px, 9.5vw, 155px);
+  --text-project: clamp(62px, 7.8vw, 126px);
+  --text-h1: clamp(52px, 6.5vw, 108px);
+  --text-h2: clamp(38px, 4.8vw, 80px);
+  --text-h3: clamp(26px, 3.2vw, 48px);
+  --text-h4: clamp(20px, 2.2vw, 32px);
+  --text-body-large: clamp(20px, 1.8vw, 26px);
+  --text-body: clamp(15px, 1.2vw, 18px);
+  --text-body-sm: 14px;
+  --text-mono: clamp(11px, 0.95vw, 13px);
+  --text-mono-sm: 10px;
+
+  /* Spacing & Grid */
+  --grid-gutter: clamp(16px, 2.5vw, 32px);
+  --grid-margin: clamp(20px, 4vw, 64px);
+  --header-height: 64px;
+
+  /* Transitions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-state: 0.65s;
+}
+
+/* Page Personalities */
+[data-theme="home"] {
+  --bg-primary: var(--canvas);
+  --bg-secondary: var(--paper);
+  --accent-color: var(--system-blue);
+  --text-primary: var(--ink);
+  --border-color: var(--line);
+}
+
+[data-theme="work"] {
+  --bg-primary: var(--paper);
+  --bg-secondary: var(--canvas);
+  --accent-color: var(--system-blue);
+  --text-primary: var(--ink);
+  --border-color: var(--line);
+}
+
+[data-theme="capabilities"] {
+  --bg-primary: var(--canvas);
+  --bg-secondary: var(--white);
+  --accent-color: var(--signal-orange);
+  --text-primary: var(--ink);
+  --border-color: var(--line);
+}
+
+[data-theme="platforms"] {
+  --bg-primary: var(--graphite);
+  --bg-secondary: #222321;
+  --bg-card: #2B2C29;
+  --text-primary: var(--white);
+  --text-secondary: var(--mist);
+  --text-muted: #8E9188;
+  --accent-color: var(--network-green);
+  --border-color: #444642;
+}
+
+[data-theme="immersive"] {
+  --bg-primary: var(--night);
+  --bg-secondary: var(--night-panel);
+  --bg-card: #181916;
+  --text-primary: var(--night-text);
+  --text-secondary: #B7B8B0;
+  --text-muted: #6E7169;
+  --accent-color: var(--violet);
+  --border-color: var(--night-line);
+}
+
+[data-theme="data"] {
+  --bg-primary: var(--paper);
+  --bg-secondary: var(--canvas);
+  --accent-color: var(--system-blue);
+  --text-primary: var(--ink);
+  --border-color: var(--line);
+}
+
+[data-theme="exhibits"] {
+  --bg-primary: #F7EFCF;
+  --bg-secondary: var(--white);
+  --accent-color: #8A6D00;
+  --text-primary: var(--ink);
+  --border-color: #D6CA9E;
+}
+
+[data-theme="process"] {
+  --bg-primary: var(--canvas);
+  --bg-secondary: var(--paper);
+  --accent-color: var(--deep-red);
+  --text-primary: var(--ink);
+  --border-color: var(--line);
+}
+
+[data-theme="studio"] {
+  --bg-primary: var(--paper);
+  --bg-secondary: var(--canvas);
+  --accent-color: var(--network-green);
+  --text-primary: var(--ink);
+  --border-color: var(--line);
+}
+
+[data-theme="insights"] {
+  --bg-primary: var(--white);
+  --bg-secondary: var(--paper);
+  --accent-color: var(--ink);
+  --text-primary: var(--ink);
+  --border-color: var(--line);
+}
+
+[data-theme="playground"] {
+  --bg-primary: var(--night);
+  --bg-secondary: var(--night-panel);
+  --bg-card: #1C1E1B;
+  --text-primary: var(--night-text);
+  --text-secondary: #B0B3A8;
+  --accent-color: var(--signal-orange);
+  --border-color: var(--night-line);
+}
+
+[data-theme="contact"] {
+  --bg-primary: var(--paper);
+  --bg-secondary: var(--canvas);
+  --accent-color: var(--system-blue);
+  --text-primary: var(--ink);
+  --border-color: var(--line);
+}
